@@ -6,7 +6,8 @@
                 <nav class="nav">
                     <div class="nav-logo">
                         <router-link :to="{ name: 'News'}" class="">
-                            <img src="../../public/img/acc_logo_header.png" alt="">
+                            <span>LOGO</span>
+<!--                            <img src="../../public/img/acc_logo_header.png" alt="">-->
                         </router-link>
                     </div>
                     <div class="nav-links">
