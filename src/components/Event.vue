@@ -1,35 +1,47 @@
 <template>
-    <section class="events">
-        <h1 class="section-title">Эвенты</h1>
-        <div class="events-wrapper">
-            <div class="events-items">
-                <router-link :to="{ name: 'Event'}" class="event-item">
-                    <div class="event-item-header">
-                        <div class="event-item-track">
-                            <span class="event-item-track-name">Silverstone</span>
-                            <div class="event-item-track-duration">
-                                <span class="material-icons">av_timer</span>
-                                <span>1h</span>
-                            </div>
-                        </div>
-                        <div class="event-item-date">
-                            <span class="material-icons">today</span>
-                            <span>25.05.2020</span>
-                        </div>
-                        <div class="event-item-time">
-                            <span class="material-icons">timer</span>
-                            <span>21:00</span>
-                        </div>
+    <section class="event-info">
+        <div  class="event">
+            <div class="event-header">
+                <div class="event-track">
+                    <span class="event-track-name">Silverstone</span>
+                    <div class="event-track-duration">
+                        <span class="material-icons">av_timer</span>
+                        <span>1h</span>
                     </div>
-                    <div class="event-item-footer">
-                        <span class="event-item-name">First Cup</span>
-                    </div>
-                </router-link>
-                <div class="event-item"></div>
-                <div class="event-item"></div>
-                <div class="event-item"></div>
-                <div class="event-item"></div>
-                <div class="event-item"></div>
+                </div>
+                <div class="event-date">
+                    <span class="material-icons">today</span>
+                    <span>25.05.2020</span>
+                </div>
+                <div class="event-time">
+                    <span class="material-icons">timer</span>
+                    <span>21:00</span>
+                </div>
+            </div>
+            <div class="event-body">
+                <p class="game-time">
+                    <span>Игровое время:</span>
+                    <span>15:00</span>
+                </p>
+                <p class="game-qualy">
+                    <span>Квалификация:</span>
+                    <span>20 мин</span>
+                </p>
+                <p class="game-fuel">
+                    <span>Дозапрвка:</span>
+                    <span>разрешена</span>
+                </p>
+                <p class="game-pit">
+                    <span>Обязательный пит-стоп:</span>
+                    <span>да</span>
+                </p>
+                <p class="game-tyres">
+                    <span>Смена шин:</span>
+                    <span>обязательна</span>
+                </p>
+            </div>
+            <div class="event-footer">
+                <span class="event-name">First Cup</span>
             </div>
         </div>
     </section>
@@ -37,32 +49,21 @@
 
 <script>
     export default {
-        name: 'Events',
+        name: 'Event',
         props: {
         }
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
     @import '../assets/styles/variables.scss';
 
-    .events {
-        padding: 0 15px;
+    .event-info {
+        padding: 15px;
     }
-    .events-wrapper {
-        /*padding: 0 15px;*/
-        width: 100%;
-    }
-    .events-items {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-    .event-item {
-        width: 300px;
-        height: 400px;
+    .event {
+        /*width: 300px;*/
+        /*height: 400px;*/
         margin-bottom: 30px;
         border: 4px solid $panel_bcgd;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -74,9 +75,13 @@
         &:hover {
             text-decoration: none;
         }
+        &-header {
+            margin-bottom: 30px;
+        }
 
         &-track {
             color: $text_white;
+            font-size: 25px;
             font-weight: 500;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -94,43 +99,43 @@
                 display: flex;
                 align-items: center;
                 .material-icons {
-                    font-size: 19px;
+                    font-size: 26px;
                     margin-right: 3px;
                 }
             }
         }
         &-date {
-             color: $text_white;
-             font-size: 14px;
-             font-weight: 500;
-             letter-spacing: 1px;
-             text-transform: uppercase;
-             padding: 5px;
-             background: darkred;
-             /*display: inline-block;*/
-             position: relative;
-             width: 50%;
+            color: $text_white;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 5px;
+            background: darkred;
+            /*display: inline-block;*/
+            position: relative;
+            width: 50%;
             display: flex;
             align-items: center;
-             &:after {
-                 content: "";
-                 width: 0;
-                 height: 0;
-                 border-style: solid;
-                 border-width: 27px 27px 0 0;
-                 border-color: #8b0000 transparent transparent transparent;
-                 position: absolute;
-                 top: 0;
-                 right: -27px;
-             }
+            &:after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 34px 34px 0 0;
+                border-color: #8b0000 transparent transparent transparent;
+                position: absolute;
+                top: 0;
+                right: -34px;
+            }
             .material-icons {
-                font-size: 15px;
+                font-size: 22px;
                 margin-right: 5px;
             }
-         }
+        }
         &-time {
             color: $text_white;
-            font-size: 14px;
+            font-size: 20px;
             font-weight: 500;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -147,15 +152,21 @@
                 width: 0;
                 height: 0;
                 border-style: solid;
-                border-width: 27px 27px 0 0;
+                border-width: 34px 34px 0 0;
                 border-color: $panel_bcgd transparent transparent transparent;
                 position: absolute;
                 top: 0;
-                right: -27px;
+                right: -34px;
             }
             .material-icons {
-                font-size: 15px;
+                font-size: 22px;
                 margin-right: 5px;
+            }
+        }
+        &-body {
+            padding: 7px;
+            p {
+                display: inline-block;
             }
         }
         &-footer {

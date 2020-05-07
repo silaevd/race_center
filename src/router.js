@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import News from './components/News.vue'
 import Events from './components/Events.vue'
+import Event from './components/Event.vue'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
             path: '/Events',
             component: Events,
             name: 'Events',
+        },
+        {
+            path: '/Event',
+            component: Event,
+            name: 'Event',
         },
         // {
         //     path: '/section-info/:id',
