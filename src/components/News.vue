@@ -5,7 +5,8 @@
             <div class="news-item">
                 <div class="news-item-header">
                     <div class="news-item-logo">
-                        <img src="../../public/img/acc_logo.jpg" alt="">
+                        <span>news</span>
+<!--                        <img src="../../public/img/acc_logo.jpg" alt="">-->
                     </div>
                     <div class="news-item-info">
                         <h2 class="news-item-title">Новая новость</h2>
@@ -32,6 +33,9 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
     @import '../assets/styles/variables.scss';
+    .news {
+        padding: 0 15px;
+    }
     .news-item {
         border: 4px solid $panel_bcgd;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
