@@ -19,26 +19,47 @@
                 </div>
             </div>
             <div class="event-body">
-                <p class="game-time">
-                    <span>Игровое время:</span>
-                    <span>15:00</span>
-                </p>
-                <p class="game-qualy">
-                    <span>Квалификация:</span>
-                    <span>20 мин</span>
-                </p>
-                <p class="game-fuel">
-                    <span>Дозапрвка:</span>
-                    <span>разрешена</span>
-                </p>
-                <p class="game-pit">
-                    <span>Обязательный пит-стоп:</span>
-                    <span>да</span>
-                </p>
-                <p class="game-tyres">
-                    <span>Смена шин:</span>
-                    <span>обязательна</span>
-                </p>
+
+                <div class="race-info">
+                    <p class="game-time">
+                        <span>Игровое время:</span>
+                        <span>15:00</span>
+                    </p>
+                    <p class="game-qualy">
+                        <span>Квалификация:</span>
+                        <span>20 мин</span>
+                    </p>
+                    <p class="game-fuel">
+                        <span>Дозапрвка:</span>
+                        <span>разрешена</span>
+                    </p>
+                    <p class="game-pit">
+                        <span>Обязательный пит-стоп:</span>
+                        <span>нет</span>
+                    </p>
+                    <p class="game-tyres">
+                        <span>Смена шин:</span>
+                        <span>обязательна</span>
+                    </p>
+                </div>
+
+                <div class="entrylist">
+
+                    <h2>Участники:</h2>
+
+                    <div class="entrylist-row">
+                        <span class="index">1</span>
+                        <span class="name">Ivan Ivanov</span>
+                        <span class="number">50</span>
+                    </div>
+
+                    <div class="entrylist-row">
+                        <span class="index">1</span>
+                        <span class="name">Ivan Ivanov</span>
+                        <span class="number">50</span>
+                    </div>
+
+                </div>
             </div>
             <div class="event-footer">
                 <span class="event-name">First Cup</span>
@@ -164,9 +185,86 @@
             }
         }
         &-body {
-            padding: 7px;
-            p {
-                display: inline-block;
+            .race-info {
+                padding: 7px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin-top: 70px;
+                p {
+                    text-transform: uppercase;
+                    position: relative;
+                    background: rgba(73, 80, 87, 0.20);
+                    padding: 3px 3px 3px 10px;
+                    margin-right: 30px;
+                    margin-bottom: 20px;
+                    width: 270px;
+                    &:after {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 25px 25px 0 0;
+                        border-color: rgba(73, 80, 87, 0.20) transparent transparent transparent;
+                        position: absolute;
+                        top: 0;
+                        right: -25px;
+                    }
+                }
+            }
+            .race-info p span:first-child {
+                font-weight: 500;
+                margin-right: 5px;
+            }
+            .race-info p span:nth-child(2) {
+                color: darkred;
+                font-weight: 500;
+            }
+
+            .entrylist {
+                margin: 70px 0;
+                padding: 7px;
+
+                h2 {
+                    margin-bottom: 20px;
+                }
+
+                &-row {
+                    /*text-transform: uppercase;*/
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    display: flex;
+                    flex-direction: row;
+                    position: relative;
+                    width: 92%;
+                    background: rgba(73, 80, 87, 0.20);
+                    padding: 7px;
+                    margin-bottom: 15px;
+                    &:after {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 33px 33px 0 0;
+                        border-color: rgba(73, 80, 87, 0.20) transparent transparent transparent;
+                        position: absolute;
+                        top: 0;
+                        right: -33px;
+                    }
+                }
+
+                .index {
+                    width: 15%;
+                    text-align: center;
+                }
+                .name {
+                    width: 70%;
+                    text-align: center;
+                }
+                .number {
+                    width: 15%;
+                    text-align: center;
+                }
             }
         }
         &-footer {
