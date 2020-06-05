@@ -56,14 +56,14 @@
     }
     .events-items {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: wrap;
         width: 100%;
     }
     .event-item {
         width: 300px;
         height: 400px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         border: 4px solid $panel_bcgd;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);

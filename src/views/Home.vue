@@ -13,7 +13,7 @@
                     <div class="nav-links">
                         <router-link :to="{ name: 'News'}" class="link nav-link">Новости</router-link>
                         <router-link :to="{ name: 'Events'}" class="link nav-link">Эвенты</router-link>
-                        <router-link :to="{ name: 'Events'}" class="profile-link">
+                        <router-link :to="{ name: 'Login'}" class="profile-link">
                             <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/9d/9df1cc05f8f7e3e67ab1f1f649f96dbdcd0f1e71_full.jpg" alt="" class="profile-link-img">
                         </router-link>
                     </div>
