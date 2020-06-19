@@ -86,13 +86,13 @@
         /*width: 300px;*/
         /*height: 400px;*/
         margin-bottom: 30px;
-        border: 4px solid $panel_bcgd;
+        border: 4px solid var(--border-color);
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        /*background: url("https://p16.muscdn.com/img/tos-maliva-p-0068/dbf44108d79642e9879899d09fa5723a~c5_300x400.jpeg");*/
+        background: var(--card-background);
         &:hover {
             text-decoration: none;
         }
@@ -101,13 +101,13 @@
         }
 
         &-track {
-            color: $text_white;
+            color: var(--text-light-color);
             font-size: 25px;
             font-weight: 500;
             letter-spacing: 1px;
             text-transform: uppercase;
             padding: 7px;
-            background: black;
+            background: var(--accent-first-color);
             display: flex;
             width: 100%;
             text-decoration: none;
@@ -126,13 +126,13 @@
             }
         }
         &-date {
-            color: $text_white;
+            color: var(--text-light-color);
             font-size: 20px;
             font-weight: 500;
             letter-spacing: 1px;
             text-transform: uppercase;
             padding: 5px;
-            background: darkred;
+            background: var(--accent-second-color);
             /*display: inline-block;*/
             position: relative;
             width: 50%;
@@ -155,13 +155,13 @@
             }
         }
         &-time {
-            color: $text_white;
+            color: var(--text-light-color);
             font-size: 20px;
             font-weight: 500;
             letter-spacing: 1px;
             text-transform: uppercase;
             padding: 5px;
-            background: $panel_bcgd;
+            background: var(--accent-third-color);
             /*display: inline-block;*/
             position: relative;
             width: 25%;
@@ -174,7 +174,7 @@
                 height: 0;
                 border-style: solid;
                 border-width: 34px 34px 0 0;
-                border-color: $panel_bcgd transparent transparent transparent;
+                border-color: var(--accent-third-color) transparent transparent transparent;
                 position: absolute;
                 top: 0;
                 right: -34px;
@@ -194,8 +194,8 @@
                 p {
                     text-transform: uppercase;
                     position: relative;
-                    background: rgba(73, 80, 87, 0.20);
-                    padding: 3px 3px 3px 10px;
+                    background: var(--chips-background);
+                    padding: 5px 5px 5px 10px;
                     margin-right: 30px;
                     margin-bottom: 20px;
                     width: 270px;
@@ -204,11 +204,11 @@
                         width: 0;
                         height: 0;
                         border-style: solid;
-                        border-width: 25px 25px 0 0;
-                        border-color: rgba(73, 80, 87, 0.20) transparent transparent transparent;
+                        border-width: 29px 29px 0 0;
+                        border-color: var(--chips-background) transparent transparent transparent;
                         position: absolute;
                         top: 0;
-                        right: -25px;
+                        right: -29px;
                     }
                 }
             }
@@ -217,8 +217,8 @@
                 margin-right: 5px;
             }
             .race-info p span:nth-child(2) {
-                color: darkred;
                 font-weight: 500;
+                color: var(--chips-second-color);
             }
 
             .entrylist {
@@ -236,8 +236,8 @@
                     display: flex;
                     flex-direction: row;
                     position: relative;
-                    width: 92%;
-                    background: rgba(73, 80, 87, 0.20);
+                    width: calc(100% - 33px);
+                    background: var(--chips-background);
                     padding: 7px;
                     margin-bottom: 15px;
                     &:after {
@@ -246,7 +246,7 @@
                         height: 0;
                         border-style: solid;
                         border-width: 33px 33px 0 0;
-                        border-color: rgba(73, 80, 87, 0.20) transparent transparent transparent;
+                        border-color: var(--chips-background) transparent transparent transparent;
                         position: absolute;
                         top: 0;
                         right: -33px;
@@ -269,20 +269,19 @@
         }
         &-footer {
             height: 60px;
-            border-top: 3px solid $panel_bcgd;
+            border-top: 3px solid var(--border-color);
             display: flex;
             padding: 5px;
             justify-content: center;
             align-items: center;
-            background: white;
+            background: var(--border-color);
             span {
                 font-family: 'Play', sans-serif;
-                color: $text;
+                color: var(--text-light-color);
                 font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 3px;
                 text-transform: uppercase;
-                text-shadow: 0px 0px 0px #FFFFFF, 1px 0px 0px #FFFFFF, -1px 0px 0px #FFFFFF, 0px 1px 0px #FFFFFF, 0px -1px 0px #FFFFFF;
             }
         }
     }

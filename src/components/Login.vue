@@ -80,7 +80,7 @@
         left: 0;
         transition: 1s;
         backface-visibility: hidden;
-        border: 2px solid $panel_bcgd;
+        border: 2px solid $card_chips;
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     }
     .register {
