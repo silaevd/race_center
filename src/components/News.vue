@@ -2,7 +2,7 @@
     <section class="news">
         <h1 class="section-title">Новости</h1>
         <div class="news-items">
-            <div class="news-item">
+            <div class="news-item card">
                 <div class="news-item-header">
                     <div class="news-item-logo">
                         <span>news</span>
@@ -37,12 +37,13 @@
         padding: 0 15px;
     }
     .news-item {
-        border: 4px solid $panel_bcgd;
+        border: 4px solid;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         &-header {
             display: flex;
-            background: $panel_bcgd;
+            /*background: $card_bcgd;*/
+            border-bottom: 1px solid inherit;
             padding: 10px;
         }
         &-logo {
@@ -72,7 +73,7 @@
         }
         &-footer {
             min-height: 50px;
-            background-color: rgba(0,0,0,0.05);
+            background-color: rgba(0,0,0,0.12);
         }
     }
 </style>

@@ -56,15 +56,15 @@
     }
     .events-items {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-wrap: wrap;
         width: 100%;
     }
     .event-item {
         width: 300px;
         height: 400px;
-        margin-bottom: 30px;
-        border: 4px solid $panel_bcgd;
+        margin-bottom: 50px;
+        border: 4px solid $card_bcgd;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         display: flex;
@@ -135,7 +135,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             padding: 5px;
-            background: $panel_bcgd;
+            background: var(--accent-third-color);
             /*display: inline-block;*/
             position: relative;
             width: 25%;
@@ -148,7 +148,7 @@
                 height: 0;
                 border-style: solid;
                 border-width: 27px 27px 0 0;
-                border-color: $panel_bcgd transparent transparent transparent;
+                border-color: var(--accent-third-color) transparent transparent transparent;
                 position: absolute;
                 top: 0;
                 right: -27px;
@@ -160,7 +160,7 @@
         }
         &-footer {
             height: 60px;
-            border-top: 3px solid $panel_bcgd;
+            border-top: 3px solid var(--border-color);
             display: flex;
             padding: 5px;
             justify-content: center;
