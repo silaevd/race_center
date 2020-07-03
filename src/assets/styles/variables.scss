@@ -65,6 +65,28 @@ body {
   background-color: var(--app-background-color);
 }
 
+button {
+  font-family: 'Play', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  font-weight: 600;
+  border: 2px solid var(--border-color);
+  background: var(--app-background-color);
+  padding: 3px 10px;
+  transition: 320ms;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--text-light-color);
+    background: var(--accent-second-color);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
 
 .container {
   width: 100%;

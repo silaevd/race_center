@@ -1,4 +1,4 @@
-<template>
+    <template>
     <section class="authorization">
         <div class="authorization-form form" :class="{ backside: isBackside }">
 
@@ -10,7 +10,7 @@
                     <input type="password" placeholder="password">
                 </div>
                 <button>Войти</button>
-                <span v-on:click = "setClassBackside">регистрация</span>
+                <a v-on:click = "setClassBackside">регистрация</a>
             </div>
 
             <div class="register">
@@ -27,7 +27,7 @@
                     <input type="password" placeholder="password">
                 </div>
                 <button>Отправить</button>
-                <span v-on:click = "setClassBackside">вход</span>
+                <a v-on:click = "setClassBackside">вход</a>
             </div>
 
         </div>
@@ -78,7 +78,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        transition: 1s;
+        transition: 0s;
         backface-visibility: hidden;
         border: 2px solid $card_chips;
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -126,6 +126,9 @@
             top: 0;
             left:0;
             padding: 5px 10px;
+        }
+        button {
+            margin:  15px 0;
         }
     }
 </style>

@@ -45,7 +45,10 @@
 
                 <div class="entrylist">
 
-                    <h2>Участники:</h2>
+                    <div class="entrylist-header">
+                        <h2>Участники:</h2>
+                        <button>Принять участие</button>
+                    </div>
 
                     <div class="entrylist-row">
                         <span class="index">1</span>
@@ -225,7 +228,10 @@
                 margin: 70px 0;
                 padding: 7px;
 
-                h2 {
+                &-header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
                     margin-bottom: 20px;
                 }
 
