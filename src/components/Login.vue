@@ -1,4 +1,4 @@
-    <template>
+<template>
     <section class="authorization">
         <div class="authorization-form form" :class="{ backside: isBackside }">
 
@@ -60,8 +60,9 @@
     .authorization {
         padding: 0 15px;
         &-form {
-            max-width: 450px;
-            min-height: 300px;
+            width: 100%;
+            max-width: 500px;
+            min-height: 350px;
             margin: 0 auto;
             padding: 15px;
             position: relative;
@@ -80,7 +81,8 @@
         left: 0;
         transition: 0s;
         backface-visibility: hidden;
-        border: 2px solid $card_chips;
+        background: var(--card-background);
+        border: 3px solid $card_chips;
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     }
     .register {
@@ -100,7 +102,7 @@
             width: 250px;
             height: 30px;
             position: relative;
-            background: rgba(73, 80, 87, 0.20);
+            background: var(--chips-background);
             margin-bottom: 10px;
             &:after {
                 content: "";
@@ -108,13 +110,14 @@
                 height: 0;
                 border-style: solid;
                 border-width: 30px 30px 0 0;
-                border-color: rgba(73, 80, 87, 0.20) transparent transparent transparent;
+                border-color: var(--chips-background) transparent transparent transparent;
                 position: absolute;
                 top: 0;
                 right: -30px;
             }
         }
         input {
+            color: var(--text-color);
             font-size: 16px;
             border: none;
             outline: none;

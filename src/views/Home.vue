@@ -53,10 +53,8 @@
         props: {
         },
         mounted() {
-            // set 'app-background' class to body tag
             let bodyElement = document.body;
             bodyElement.classList.add("app-background");
-            // check for active theme
             let htmlElement = document.documentElement;
             let theme = localStorage.getItem("theme");
             if (theme === 'dark') {
@@ -69,7 +67,6 @@
         },
         watch: {
             darkMode: function () {
-                // add/remove class to/from html tag
                 let htmlElement = document.documentElement;
                 if (this.darkMode) {
                     localStorage.setItem("theme", 'dark');

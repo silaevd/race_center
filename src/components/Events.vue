@@ -3,7 +3,7 @@
         <h1 class="section-title">Эвенты</h1>
         <div class="events-wrapper">
             <div class="events-items">
-                <router-link :to="{ name: 'Event'}" class="event-item">
+                <router-link :to="{ name: 'Event'}" class="event-item" ref="event">
                     <div class="event-item-header">
                         <div class="event-item-track">
                             <span class="event-item-track-name">Silverstone</span>
@@ -39,6 +39,13 @@
     export default {
         name: 'Events',
         props: {
+        },
+        data() {
+            return {
+                trackName: '',
+            }
+        },
+        mounted() {
         }
     }
 </script>
@@ -70,7 +77,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        /*background: url("https://p16.muscdn.com/img/tos-maliva-p-0068/dbf44108d79642e9879899d09fa5723a~c5_300x400.jpeg");*/
+        background: url("https://www.gtplanet.net/wp-content/uploads/2013/06/silverstone_gp_02-640x360.jpg") center;
         &:hover {
             text-decoration: none;
         }
@@ -165,15 +172,14 @@
             padding: 5px;
             justify-content: center;
             align-items: center;
-            background: white;
+            background: var(--border-color);
             span {
                 font-family: 'Play', sans-serif;
-                color: $text;
+                color: var(--text-light-color);
                 font-size: 20px;
                 font-weight: 700;
                 letter-spacing: 3px;
                 text-transform: uppercase;
-                text-shadow: 0px 0px 0px #FFFFFF, 1px 0px 0px #FFFFFF, -1px 0px 0px #FFFFFF, 0px 1px 0px #FFFFFF, 0px -1px 0px #FFFFFF;
             }
         }
     }

@@ -37,13 +37,14 @@
         padding: 0 15px;
     }
     .news-item {
-        border: 4px solid;
+        color: var(--text-color);
+        border: 4px solid var(--border-color);
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         &-header {
             display: flex;
             /*background: $card_bcgd;*/
-            border-bottom: 1px solid inherit;
+            border-bottom: 2px solid var(--border-color);
             padding: 10px;
         }
         &-logo {
@@ -55,7 +56,6 @@
             }
         }
         &-info {
-            color: $text_white;
         }
         &-title {
             /*margin-bottom: 10px;*/
@@ -66,6 +66,7 @@
             font-weight: 500;
         }
         &-body {
+
             padding: 10px;
         }
         &-text {
@@ -73,7 +74,8 @@
         }
         &-footer {
             min-height: 50px;
-            background-color: rgba(0,0,0,0.12);
+            /*background-color: rgba(0,0,0,0.12);*/
+            background-color: var(--chips-background);
         }
     }
 </style>
